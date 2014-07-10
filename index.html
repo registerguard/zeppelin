@@ -13,6 +13,15 @@
 	
 	<style>
 		
+		/**
+		 * Note: If anyone wants more nav, the can pound sand down a rat hole!
+		 */
+		
+		body {
+			padding-top: 40px; /* Overall height of header. */
+			xbackground: #999; /* For light theme. */
+		}
+		
 		.z_animated {
 			-webkit-animation-duration: 0.5s;
 			   -moz-animation-duration: 0.5s;
@@ -77,18 +86,19 @@
 		}
 		
 		#zeppelin {
-			color: #fff;
+			color: #ccc;
 			background: rgba(0, 0, 0, .9);
 			padding: 10px;
-			border-bottom: 1px solid #eee;
 			position: fixed;
 			z-index: 10;
 			right: 0;
 			left: 0;
 			top: 0;
 		}
-		@media print { #zeppelin { display: none; } }
-		
+		#zeppelin.z_light {
+			color: #333;
+			background: rgba(255, 255, 255, .9)
+		}
 		#zeppelin h6 {
 			text-indent: -999em;
 			white-space: nowrap;
@@ -103,11 +113,12 @@
 		#zeppelin h6 a {
 			width: 100%;
 			height: 100%;
-			background-image: url(trg-300x40-white.png);
+			background-image: url(trg-300x40-light.png);
 			background-repeat: no-repeat;
 			background-size: 150px 20px;
 			display: block;
 		}
+		#zeppelin.z_light h6 a { background-image: url(trg-300x40-dark.png); }
 		#zeppelin h6 a:visited,
 		#zeppelin h6 a:visited:hover,
 		#zeppelin h6 a:focus,
@@ -118,9 +129,8 @@
 		#zeppelin h6 a:focus { outline: none; }
 		#zeppelin p {
 			font-family: Cambria, Georgia, serif;
-			color: #ccc;
 			font-size: 14px;
-			line-height: 22px;
+			line-height: 22px; /* Height of png + 2px (for text wrap vertical spacing). */
 			margin: 0;
 			text-indent: 160px; /* Width of png + 10px */
 			letter-spacing: .1em;
@@ -131,19 +141,24 @@
 			border-left: 2px solid #666;
 			padding-left: 10px;
 		}
+		#zeppelin.z_light p::before { border-color: #ccc; }
 		@media screen and (max-width: 640px) {
 			#zeppelin h6 {
 				width: 35px;
 				height: 20px;
 			}
 			#zeppelin h6 a {
-				background-image: url(rg-70x40-white.png);
+				background-image: url(rg-70x40-light.png);
 				background-size: 35px 20px;
 			}
+			#zeppelin.z_light h6 a { background-image: url(rg-70x40-dark.png); }
 			#zeppelin p { text-indent: 45px; } /* IBID */
 		}
+		@media print { #zeppelin { display: none; } }
 		
-		body { padding-top: 3em; }
+		/* DEMO ONLY: */
+		
+		p { margin-top: 0; }
 		
 	</style>
 	
@@ -152,8 +167,8 @@
 		
 		window.onload = function() {
 			var zeppelin = new Headroom(document.querySelector("header"), {
-				"tolerance": 10,
-				"offset": 205,
+				"tolerance": 5,
+				"offset": 80,
 				"classes": {
 					"initial": "z_animated",
 					"pinned": "z_slide-down",
