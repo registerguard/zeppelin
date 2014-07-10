@@ -13,17 +13,6 @@
 	
 	<style>
 		
-		@font-face {
-			font-family: "RGWeb";
-			src: url("http://fonts.registerguard.com/rg/rgweb.eot");
-			src: url("http://fonts.registerguard.com/rg/rgweb.eot?#iefix") format("embedded-opentype"),
-				url("http://fonts.registerguard.com/rg/rgweb.woff") format("woff"),
-				url("http://fonts.registerguard.com/rg/rgweb.ttf") format("truetype"),
-				url("http://fonts.registerguard.com/rg/rgweb.svg#RGWeb") format("svg");
-			font-weight: normal;
-			font-style: normal;
-		}
-		
 		.z_animated {
 			-webkit-animation-duration: 0.5s;
 			   -moz-animation-duration: 0.5s;
@@ -88,7 +77,8 @@
 		}
 		
 		#zeppelin {
-			background: rgba(255, 255, 255, .9);
+			color: #fff;
+			background: rgba(0, 0, 0, .9);
 			padding: 10px;
 			border-bottom: 1px solid #eee;
 			position: fixed;
@@ -99,54 +89,59 @@
 		}
 		@media print { #zeppelin { display: none; } }
 		
-		#zeppelin h1 {
-			font: 40px "RGWeb", Cambria, Georgia, serif;
-			font-weight: normal;
-			font-style: normal;
-			line-height: 1;
-			margin: 0;
+		#zeppelin h6 {
+			text-indent: -999em;
 			white-space: nowrap;
-			position: absolute;
-			top: 10;
-			left: 10;
-		}
-		#zeppelin h1 a,
-		#zeppelin h1 a:visited,
-		#zeppelin h1 a:visited:hover,
-		#zeppelin h1 a:focus,
-		#zeppelin h1 a:focus:hover,
-		#zeppelin h1 a:hover,
-		#zeppelin h1 a:active {
-			color: #000;
-			text-decoration: none;
-		}
-		#zeppelin h1 a:active,
-		#zeppelin h1 a:focus { outline: 0; }
-		
-		#zeppelin ul { *zoom: 1; } #zeppelin ul:before, #zeppelin ul:after { content: " "; display: table; } #zeppelin ul:after { clear: both; }
-		#zeppelin ul,
-		#zeppelin li {
+			width: 150px;
+			height: 20px;
 			margin: 0;
-			padding: 0;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			overflow: hidden;
 		}
-		#zeppelin li {
-			float: right;
-			display: inline;
-		}
-		#zeppelin li a {
+		#zeppelin h6 a {
+			width: 100%;
+			height: 100%;
+			background-image: url(trg-300x40-white.png);
+			background-repeat: no-repeat;
+			background-size: 150px 20px;
 			display: block;
-			padding: 10px;
 		}
-		#zeppelin li a,
-		#zeppelin li a:visited {
-			color: #000;
-			text-decoration: none;
+		#zeppelin h6 a:visited,
+		#zeppelin h6 a:visited:hover,
+		#zeppelin h6 a:focus,
+		#zeppelin h6 a:focus:hover,
+		#zeppelin h6 a:hover,
+		#zeppelin h6 a:active { text-decoration: none; }
+		#zeppelin h6 a:active,
+		#zeppelin h6 a:focus { outline: none; }
+		#zeppelin p {
+			font-family: Cambria, Georgia, serif;
+			color: #ccc;
+			font-size: 14px;
+			line-height: 22px;
+			margin: 0;
+			text-indent: 160px; /* Width of png + 10px */
+			letter-spacing: .1em;
+			text-transform: uppercase;
 		}
-		#zeppelin li a:visited:hover,
-		#zeppelin li a:focus,
-		#zeppelin li a:focus:hover,
-		#zeppelin li a:hover,
-		#zeppelin li a:active { text-decoration: underline; }
+		#zeppelin p::before {
+			content: "";
+			border-left: 2px solid #666;
+			padding-left: 10px;
+		}
+		@media screen and (max-width: 640px) {
+			#zeppelin h6 {
+				width: 35px;
+				height: 20px;
+			}
+			#zeppelin h6 a {
+				background-image: url(rg-70x40-white.png);
+				background-size: 35px 20px;
+			}
+			#zeppelin p { text-indent: 45px; } /* IBID */
+		}
 		
 		body { padding-top: 3em; }
 		
@@ -176,17 +171,8 @@
 <body>
 	
 	<header id="zeppelin" role="banner">
-		<h1><a href="http://registerguard.com">The Register-Guard</a></h1>
-		<nav>
-			<ul>
-				<li><a href="http://services.registerguard.com/">Subscriber Services</a></li>
-				<li><a href="http://registerguard.com/homes">Homes</a></li>
-				<li><a href="http://registerguard.com/autos">Autos</a></li>
-				<li><a href="http://registerguard.com/jobs">Jobs</a></li>
-				<li><a href="http://registerguard.ca.kaango.com/">Classified</a></li>
-				<li><a href="http://registerguard.com/">Home</a></li>
-			</ul>
-		</nav>
+		<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
+		<p>Lorem ipsum dolor</p>
 	</header>
 	
 	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
