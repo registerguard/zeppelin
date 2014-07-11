@@ -1,0 +1,33 @@
+{
+  "title": "Zeppelin",
+  "name": "zeppelin",
+  "description": "A Zeppelin is a type of rigid airship named after the German Count Ferdinand von Zeppelin who pioneered rigid airship development at the beginning of the 20th century.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/registerguard/zeppelin",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/registerguard/zeppelin.git"
+  },
+  "author": {
+    "name": "The Register-Guard",
+    "url": "http://registerguard.com"
+  },
+  "production": "http://static.registerguard.com/v5/zeppelin/prod",
+  "dependencies": {
+    "grunt": "~0",
+    "grunt-bower-task": "~0",
+    "grunt-contrib-clean": "~0",
+    "grunt-contrib-concat": "~0",
+    "grunt-contrib-copy": "~0",
+    "grunt-contrib-jshint": "~0",
+    "grunt-contrib-sass": "~0",
+    "grunt-contrib-uglify": "~0",
+    "grunt-contrib-watch": "~0",
+    "grunt-env": "~0",
+    "grunt-preprocess": "~4"
+  },
+  "scripts": {
+    "dev": "grunt",
+    "prod": "grunt prod"
+  }
+}

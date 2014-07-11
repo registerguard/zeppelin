@@ -7,180 +7,50 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title></title>
-	<meta name="description" content="">
+	<title><!-- @echo title --> | v<!-- @echo version --> | <!-- @echo NODE_ENV --></title>
+	<meta name="description" content="<!-- @echo description -->">
 	<meta name="keywords" content="">
 	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
+	
+	<!-- @endif -->
+	
 	<style>
-		
-		/**
-		 * Note: If anyone wants more nav, the can pound sand down a rat hole!
-		 */
-		
-		body {
-			padding-top: 40px; /* Overall height of header. */
-			xbackground: #999; /* For light theme. */
-		}
-		
-		.z_animated {
-			-webkit-animation-duration: 0.5s;
-			   -moz-animation-duration: 0.5s;
-			     -o-animation-duration: 0.5s;
-			        animation-duration: 0.5s;
-			-webkit-animation-fill-mode: both;
-			   -moz-animation-fill-mode: both;
-			     -o-animation-fill-mode: both;
-			        animation-fill-mode: both;
-		}
-		@-webkit-keyframes z_slide-down {
-			0% { -webkit-transform: translateY(-100%); }
-			100% { -webkit-transform: translateY(0); }
-		}
-		@-moz-keyframes z_slide-down {
-			0% { -moz-transform: translateY(-100%); }
-			100% { -moz-transform: translateY(0); }
-		}
-		@-o-keyframes z_slide-down {
-			0% { -o-transform: translateY(-100%); }
-			100% { -o-transform: translateY(0); }
-		}
-		@keyframes z_slide-down {
-			0% { transform: translateY(-100%); }
-			100% { transform: translateY(0); }
-		}
-		.z_animated.z_slide-down {
-			-webkit-animation-name: z_slide-down;
-			-moz-animation-name: z_slide-down;
-			-o-animation-name: z_slide-down;
-			animation-name: z_slide-down;
-		}
-		@-webkit-keyframes z_slide-up {
-			0% { -webkit-transform: translateY(0); }
-			100% { -webkit-transform: translateY(-100%); }
-		}
-		@-moz-keyframes z_slide-up {
-			0% { -moz-transform: translateY(0); }
-			100% { -moz-transform: translateY(-100%); }
-		}
-		@-o-keyframes z_slide-up {
-			0% { -o-transform: translateY(0); }
-			100% { -o-transform: translateY(-100%); }
-		}
-		@keyframes z_slide-up {
-			0% { transform: translateY(0); }
-			100% { transform: translateY(-100%); }
-		}
-		.z_animated.z_slide-up {
-			-webkit-animation-name: z_slide-up;
-			-moz-animation-name: z_slide-up;
-			-o-animation-name: z_slide-up;
-			animation-name: z_slide-up;
-		}
-		
-		#zeppelin *,
-		#zeppelin *::before,
-		#zeppelin *::after {
-			-webkit-box-sizing: border-box;
-			   -moz-box-sizing: border-box;
-			        box-sizing: border-box;
-		}
-		
-		#zeppelin {
-			color: #ccc;
-			background: rgba(0, 0, 0, .9);
-			padding: 10px;
-			position: fixed;
-			z-index: 10;
-			right: 0;
-			left: 0;
-			top: 0;
-		}
-		#zeppelin.z_light {
-			color: #333;
-			background: rgba(255, 255, 255, .9)
-		}
-		#zeppelin h6 {
-			text-indent: -999em;
-			white-space: nowrap;
-			width: 150px;
-			height: 20px;
-			margin: 0;
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			overflow: hidden;
-		}
-		#zeppelin h6 a {
-			width: 100%;
-			height: 100%;
-			background-image: url(trg-300x40-light.png);
-			background-repeat: no-repeat;
-			background-size: 150px 20px;
-			display: block;
-		}
-		#zeppelin.z_light h6 a { background-image: url(trg-300x40-dark.png); }
-		#zeppelin h6 a:visited,
-		#zeppelin h6 a:visited:hover,
-		#zeppelin h6 a:focus,
-		#zeppelin h6 a:focus:hover,
-		#zeppelin h6 a:hover,
-		#zeppelin h6 a:active { text-decoration: none; }
-		#zeppelin h6 a:active,
-		#zeppelin h6 a:focus { outline: none; }
-		#zeppelin p {
-			font-family: Cambria, Georgia, serif;
-			font-size: 14px;
-			line-height: 22px; /* Height of png + 2px (for text wrap vertical spacing). */
-			margin: 0;
-			text-indent: 160px; /* Width of png + 10px */
-			letter-spacing: .1em;
-			text-transform: uppercase;
-		}
-		#zeppelin p::before {
-			content: "";
-			border-left: 2px solid #666;
-			padding-left: 10px;
-		}
-		#zeppelin.z_light p::before { border-color: #ccc; }
-		@media screen and (max-width: 640px) {
-			#zeppelin h6 {
-				width: 35px;
-				height: 20px;
-			}
-			#zeppelin h6 a {
-				background-image: url(rg-70x40-light.png);
-				background-size: 35px 20px;
-			}
-			#zeppelin.z_light h6 a { background-image: url(rg-70x40-dark.png); }
-			#zeppelin p { text-indent: 45px; } /* IBID */
-		}
-		@media print { #zeppelin { display: none; } }
-		
-		/* DEMO ONLY: */
 		
 		p { margin-top: 0; }
 		
 	</style>
 	
-	<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<script src="./scripts/headroom.js"></script>
+	<script src="./scripts/zeppelin.js"></script>
+	
 	<script>
 		
-		window.onload = function() {
-			var zeppelin = new Headroom(document.querySelector("header"), {
-				"tolerance": 5,
-				"offset": 80,
-				"classes": {
-					"initial": "z_animated",
-					"pinned": "z_slide-down",
-					"unpinned": "z_slide-up",
-					"top": "z_top",
-					"notTop": "z_top"
-				}
-			});
-			zeppelin.init();
-		};
+		$(document).ready(function() {});
+		
+		$(window).load(function() {});
+		
+		$(window).resize(function() {});
 		
 	</script>
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	
+	<!-- @endif -->
 	
 </head>
 <body>
