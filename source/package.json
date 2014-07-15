@@ -15,7 +15,6 @@
   "production": "http://static.registerguard.com/v5/zeppelin/prod",
   "dependencies": {
     "grunt": "~0",
-    "grunt-bower-task": "~0",
     "grunt-contrib-clean": "~0",
     "grunt-contrib-concat": "~0",
     "grunt-contrib-copy": "~0",

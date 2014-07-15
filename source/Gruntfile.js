@@ -70,34 +70,6 @@ module.exports = function(grunt) {
 		
 		ver : 1, // Increment if more than one build is needed in a single day.
 		
-		/*----------------------------------( BOWER )----------------------------------*/
-		
-		/**
-		 * Install Bower packages. Smartly.
-		 *
-		 * Use this task to update dependencies defined in `bower.json`.
-		 *
-		 * @see https://github.com/yatskevich/grunt-bower-task
-		 * @see http://bower.io/
-		 */
-		
-		bower : {
-			
-			install : {
-				
-				options : {
-					
-					targetDir : './files/plugins', // A directory where you want to keep your Bower packages.
-					cleanup : true,                // Will clean target and bower directories.
-					layout : 'byComponent',        // Folder structure type.
-					verbose : true,                // Debug output.
-					
-				},
-				
-			},
-			
-		},
-		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
 		/**
@@ -224,12 +196,8 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
-						'./files/scripts/fastclick.js',
-						'./files/scripts/jquery.js',
-						'./files/scripts/jquery.*.js',
-						'./files/scripts/ghb.js',
-						'./files/scripts/ghb.mod.*.js',
-						'./files/scripts/ghb.init.js'
+						'./files/scripts/headroom.js',
+						'./files/scripts/<%= pkg.name %>.js',
 					],
 					
 				}
@@ -268,7 +236,6 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../dev/styles/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
-					'../dev/styles/development.css' : './files/styles/development.scss',
 					
 				},
 				
@@ -381,8 +348,6 @@ module.exports = function(grunt) {
 	});
 	
 	/*----------------------------------( TASKS )----------------------------------*/
-	
-	grunt.loadNpmTasks('grunt-bower-task');
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	

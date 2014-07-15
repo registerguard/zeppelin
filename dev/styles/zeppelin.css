@@ -7,7 +7,7 @@
  * @docs https://github.com/registerguard/zeppelin
  * @copyright Copyright (c) 2014 The Register-Guard.
  * @version 0.1.0
- * @date 2014/07/11
+ * @date 2014/07/14
  */
 
 
@@ -41,6 +41,7 @@ body {
     -webkit-transform: translateY(0);
   }
 }
+
 @-moz-keyframes z_slide-down {
   0% {
     -moz-transform: translateY(-100%);
@@ -50,6 +51,7 @@ body {
     -moz-transform: translateY(0);
   }
 }
+
 @-o-keyframes z_slide-down {
   0% {
     -o-transform: translateY(-100%);
@@ -59,6 +61,7 @@ body {
     -o-transform: translateY(0);
   }
 }
+
 @keyframes z_slide-down {
   0% {
     transform: translateY(-100%);
@@ -68,6 +71,7 @@ body {
     transform: translateY(0);
   }
 }
+
 .z_animated.z_slide-down {
   -webkit-animation-name: z_slide-down;
   -moz-animation-name: z_slide-down;
@@ -84,6 +88,7 @@ body {
     -webkit-transform: translateY(-100%);
   }
 }
+
 @-moz-keyframes z_slide-up {
   0% {
     -moz-transform: translateY(0);
@@ -93,6 +98,7 @@ body {
     -moz-transform: translateY(-100%);
   }
 }
+
 @-o-keyframes z_slide-up {
   0% {
     -o-transform: translateY(0);
@@ -102,6 +108,7 @@ body {
     -o-transform: translateY(-100%);
   }
 }
+
 @keyframes z_slide-up {
   0% {
     transform: translateY(0);
@@ -111,6 +118,7 @@ body {
     transform: translateY(-100%);
   }
 }
+
 .z_animated.z_slide-up {
   -webkit-animation-name: z_slide-up;
   -moz-animation-name: z_slide-up;
@@ -195,7 +203,7 @@ body {
 
 #zeppelin p::before {
   content: "";
-  border-left: 2px solid #666;
+  border-left: 2px solid #666666;
   padding-left: 10px;
 }
 
