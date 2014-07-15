@@ -1,25 +1,15 @@
 /**
  * Zeppelin
- * A Zeppelin is a type of rigid airship named after the German Count Ferdinand von Zeppelin who pioneered rigid airship development at the beginning of the 20th century.
+ * If anyone wants more nav, the can pound sand down a rat hole! :)
  *
  * @author The Register-Guard
  * @link http://registerguard.com
  * @docs https://github.com/registerguard/zeppelin
  * @copyright Copyright (c) 2014 The Register-Guard.
  * @version 0.1.0
- * @date 2014/07/14
+ * @date 2014/07/15
  */
 
-
-/**
- * Note: If anyone wants more nav, the can pound sand down a rat hole!
- */
-body {
-  padding-top: 40px;
-  /* Overall height of header. */
-  xbackground: #999;
-  /* For light theme. */
-}
 
 .z_animated {
   -webkit-animation-duration: 0.5s;
@@ -126,12 +116,8 @@ body {
   animation-name: z_slide-up;
 }
 
-#zeppelin *,
-#zeppelin *::before,
-#zeppelin *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+body {
+  padding-top: 40px;
 }
 
 #zeppelin {
@@ -144,12 +130,13 @@ body {
   left: 0;
   top: 0;
 }
-
-#zeppelin.z_light {
-  color: #333;
-  background: rgba(255, 255, 255, 0.9);
+#zeppelin *,
+#zeppelin *::before,
+#zeppelin *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 #zeppelin h6 {
   text-indent: -999em;
   white-space: nowrap;
@@ -161,7 +148,6 @@ body {
   left: 10px;
   overflow: hidden;
 }
-
 #zeppelin h6 a {
   width: 100%;
   height: 100%;
@@ -170,67 +156,51 @@ body {
   background-size: 150px 20px;
   display: block;
 }
-
-#zeppelin.z_light h6 a {
-  background-image: url(../images/trg-300x40-dark.png);
-}
-
-#zeppelin h6 a:visited,
-#zeppelin h6 a:visited:hover,
-#zeppelin h6 a:focus,
-#zeppelin h6 a:focus:hover,
-#zeppelin h6 a:hover,
-#zeppelin h6 a:active {
+#zeppelin h6 a:visited, #zeppelin h6 a:visited:hover, #zeppelin h6 a:focus, #zeppelin h6 a:focus:hover, #zeppelin h6 a:hover, #zeppelin h6 a:active {
   text-decoration: none;
 }
-
-#zeppelin h6 a:active,
-#zeppelin h6 a:focus {
+#zeppelin h6 a:active, #zeppelin h6 a:focus {
   outline: none;
 }
-
 #zeppelin p {
   font-family: Cambria, Georgia, serif;
   font-size: 14px;
-  line-height: 22px;
-  /* Height of png + 2px (for text wrap vertical spacing). */
-  margin: 0;
   text-indent: 160px;
-  /* Width of png + 10px */
-  letter-spacing: .1em;
   text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 22px;
+  margin: 0;
 }
-
 #zeppelin p::before {
   content: "";
   border-left: 2px solid #666666;
   padding-left: 10px;
 }
-
+#zeppelin.z_light {
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+}
+#zeppelin.z_light h6 a {
+  background-image: url(../images/trg-300x40-dark.png);
+}
 #zeppelin.z_light p::before {
   border-color: #ccc;
 }
-
 @media screen and (max-width: 640px) {
   #zeppelin h6 {
     width: 35px;
     height: 20px;
   }
-
   #zeppelin h6 a {
     background-image: url(../images/rg-70x40-light.png);
     background-size: 35px 20px;
   }
-
-  #zeppelin.z_light h6 a {
-    background-image: url(../images/rg-70x40-dark.png);
-  }
-
   #zeppelin p {
     text-indent: 45px;
   }
-
-  /* IBID */
+  #zeppelin.z_light h6 a {
+    background-image: url(../images/rg-70x40-dark.png);
+  }
 }
 @media print {
   #zeppelin {
