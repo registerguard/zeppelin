@@ -137,6 +137,15 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#zeppelin a, #zeppelin a:visited {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #555555;
+}
+#zeppelin a:visited:hover, #zeppelin a:focus, #zeppelin a:focus:hover, #zeppelin a:hover, #zeppelin a:active {
+  color: #fff;
+  border-color: inherit;
+}
 #zeppelin h6 {
   text-indent: -999em;
   white-space: nowrap;
@@ -154,10 +163,8 @@ body {
   background-image: url(../images/trg-300x40-light.png);
   background-repeat: no-repeat;
   background-size: 150px 20px;
+  border: 0;
   display: block;
-}
-#zeppelin h6 a:visited, #zeppelin h6 a:visited:hover, #zeppelin h6 a:focus, #zeppelin h6 a:focus:hover, #zeppelin h6 a:hover, #zeppelin h6 a:active {
-  text-decoration: none;
 }
 #zeppelin h6 a:active, #zeppelin h6 a:focus {
   outline: none;
@@ -177,7 +184,7 @@ body {
   padding-left: 10px;
 }
 #zeppelin.z_light {
-  color: #333;
+  color: #666;
   background: rgba(255, 255, 255, 0.9);
 }
 #zeppelin.z_light h6 a {
@@ -185,6 +192,13 @@ body {
 }
 #zeppelin.z_light p::before {
   border-color: #ccc;
+}
+#zeppelin.z_light a, #zeppelin.z_light a:visited {
+  border-color: #999;
+}
+#zeppelin.z_light a:visited:hover, #zeppelin.z_light a:focus, #zeppelin.z_light a:focus:hover, #zeppelin.z_light a:hover, #zeppelin.z_light a:active {
+  color: #000;
+  border-color: inherit;
 }
 @media screen and (max-width: 640px) {
   #zeppelin h6 {
