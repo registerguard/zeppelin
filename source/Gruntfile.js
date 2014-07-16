@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 			
 			files : [
 				
-				'<%= jshint.init %>',
+				'./Gruntfile.js',
 				'./files/scripts/**/*',
 				'./files/styles/**/*',
 				'./files/templates/**/*',
