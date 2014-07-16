@@ -6,7 +6,7 @@
 	</a>
 </p>
 
-**If anyone wants more nav, the can pound sand down a rat hole!**
+**If anyone wants more nav then they can pound sand down a rat hole! :)**
 
 ## About
 
@@ -23,12 +23,13 @@ DEVELOPMENT | PRODUCTION
 
 ## Usage
 
-1. [Click here](http://dev.registerguard.com/zeppelin/prod/); this will redirect you to the latest Zeppelin “production” build.
+1. [Visit](http://dev.registerguard.com/zeppelin/prod/) the latest Zeppelin “production” build.
 1. View page source.
 1. Copy and paste the `zeppelin.min.css` stylesheet into the `<head>` of your document.
-1. Copy and paste the `zeppelin.min.js` javascript into the `<head>` or foot of your document.
-1. Copy `<header>` markup into your documents, just after the opening `<body>` tag.
+1. Copy and paste the `zeppelin.min.js` javascript into the `<head>`, or foot, of your document.
+1. Copy the `<header>` markup into your document just after the opening `<body>` tag.
 1. Modify the `Lorem ipsum dolor` text to suit the needs of your project.
+1. Update the “[Active build versions](https://github.com/registerguard/zeppelin/wiki/Active-build-versions)” page of the Zeppelin WIKI.
 
 Example:
 
@@ -41,7 +42,7 @@ Example:
 <body>
 <header id="zeppelin" role="banner">
 	<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
-	<p>Welcome to </p>
+	<p>Lorem <a href="#">ipsum dolor</a></p>
 </header>
 <script src="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140714/1/scripts/zeppelin.min.js"></script>
 </body>
@@ -50,7 +51,7 @@ Example:
 
 ### Theme:
 
-By default, the Zeppelin them is light text on a dark background.
+By default, the Zeppelin theme is light text on a dark background.
 
 Add `class="z_light"` to the `<header>` for a dark text on a light background.
 
@@ -82,7 +83,7 @@ $ npm install
 
 This project depends on [Headroom.js](https://github.com/WickyNilliams/headroom.js).
 
-While Headroom.js has been included with this repo, on can update to the latest version using [Bower](http://bower.io/); just `cd` to `source/` and run `bower update`.
+While Headroom.js has been included with this repo, one can update to the latest version using [Bower](http://bower.io/); just `cd` to `source/` and run `bower update`.
 
 Note that `headroom.js` has been symlinked to the `source/files/scripts/` directory:
 
