@@ -1,13 +1,13 @@
 /**
  * Zeppelin
- * If anyone wants more nav, the can pound sand down a rat hole! :)
+ * If anyone wants more nav then they can pound sand down a rat hole! :)
  *
  * @author The Register-Guard
  * @link http://registerguard.com
  * @docs https://github.com/registerguard/zeppelin
  * @copyright Copyright (c) 2014 The Register-Guard.
  * @version 0.1.0
- * @date 2014/07/15
+ * @date 2014/07/16
  */
 
 
@@ -185,7 +185,7 @@ body {
 }
 #zeppelin.z_light {
   color: #666;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.75);
 }
 #zeppelin.z_light h6 a {
   background-image: url(../images/trg-300x40-dark.png);
