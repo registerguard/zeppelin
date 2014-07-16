@@ -101,7 +101,7 @@ $ grunt
 
 Visit the development build:
 
-<http://localhost/drone/dev/>
+<http://localhost/zeppelin/dev/>
 
 **Note:** The above URL will depend upon your local development environment; for previewing my projects I use [XAMPP](http://www.apachefriends.org/index.html).
 
@@ -138,7 +138,7 @@ Depending on your setup, you may need to pull the latest build to your productio
 
 Visit the production build locally:
 
-<http://localhost/drone/prod/>
+<http://localhost/zeppelin/prod/>
 
 **Note:** The production build’s asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing the production’s HTML file and related assets.
 
@@ -162,7 +162,7 @@ Follow the appropriate steps to update the production build’s path on the vari
 
 ### Update WIKI:
 
-Lastly, update the [“Active build versions” page of the Zeppelin WIKI](https://github.com/registerguard/zeppelin/wiki/Active-build-versions).
+Lastly, update the “[Active build versions](https://github.com/registerguard/zeppelin/wiki/Active-build-versions)” page of the Zeppelin WIKI.
 
 ---
 
