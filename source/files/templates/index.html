@@ -14,12 +14,17 @@
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
 	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
+	<script src="./scripts/headroom.js"></script>
+	<script src="./scripts/zeppelin.js"></script>
 	
 	<!-- @endif -->
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
+	<!-- [BEGIN] Zeppelin -->
 	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
+	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	<!-- [END] Zeppelin -->
 	
 	<!-- @endif -->
 	
@@ -29,19 +34,6 @@
 		p { margin-top: 0; }
 		
 	</style>
-	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-	
-	<script src="./scripts/headroom.js"></script>
-	<script src="./scripts/zeppelin.js"></script>
-	
-	<!-- @endif -->
-	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
-	
-	<!-- @endif -->
 	
 </head>
 <body>
