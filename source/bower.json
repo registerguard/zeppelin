@@ -2,5 +2,10 @@
   "name": "bower",
   "dependencies": {
     "headroom.js": "~0"
+  },
+  "exportsOverride": {
+    "headroom.js": {
+      "": "dist/headroom.js"
+    }
   }
 }

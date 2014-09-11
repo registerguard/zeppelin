@@ -70,6 +70,34 @@ module.exports = function(grunt) {
 		
 		ver : 1, // Increment if more than one build is needed in a single day.
 		
+		/*----------------------------------( BOWER )----------------------------------*/
+		
+		/**
+		 * Install Bower packages. Smartly.
+		 *
+		 * Use this task to update dependencies defined in `bower.json`.
+		 *
+		 * @see https://github.com/yatskevich/grunt-bower-task
+		 * @see http://bower.io/
+		 */
+		
+		bower : {
+			
+			install : {
+				
+				options : {
+					
+					targetDir : './files/plugins', // A directory where you want to keep your Bower packages.
+					cleanup : true,                // Will clean target and bower directories.
+					layout : 'byComponent',        // Folder structure type.
+					verbose : true,                // Debug output.
+					
+				},
+				
+			},
+			
+		},
+		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
 		/**
@@ -349,6 +377,8 @@ module.exports = function(grunt) {
 	
 	/*----------------------------------( TASKS )----------------------------------*/
 	
+	grunt.loadNpmTasks('grunt-bower-task');
+	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -377,6 +407,8 @@ module.exports = function(grunt) {
 	//----------------------------------
 	
 	grunt.registerTask('init', ['jshint',]);
+	
+	grunt.registerTask('plugins', ['bower',]);
 	
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	

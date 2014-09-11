@@ -1,1 +1,1 @@
-../plugins/headroom.js/dist/headroom.js
+../plugins/headroom.js/headroom.js
