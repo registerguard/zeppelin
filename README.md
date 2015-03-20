@@ -37,14 +37,14 @@ Example:
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140714/1/styles/zeppelin.min.css">
+<link rel="stylesheet" href="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140911/1/styles/zeppelin.min.css">
 </head>
 <body>
 <header id="zeppelin" role="banner">
 	<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
 	<p>Lorem <a href="#">ipsum dolor</a></p>
 </header>
-<script src="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140714/1/scripts/zeppelin.min.js"></script>
+<script src="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140911/1/scripts/zeppelin.min.js"></script>
 </body>
 </html>
 ```
